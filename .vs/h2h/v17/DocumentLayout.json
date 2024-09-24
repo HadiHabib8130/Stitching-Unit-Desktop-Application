@@ -1,0 +1,235 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\vs code\\projects\\h2h\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmaccessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmaccessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|d:\\vs code\\projects\\h2h\\h2h\\frmsearchaccs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmsearchaccs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmsearchaccs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmsearchaccs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmaccessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmaccessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_GQRD8GC_SQLEXPRESS/H2H/True/SqlTable/dbo.tbl_Accessory.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmaddunit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmaddunit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmaddunit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmaddunit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmaccessorycategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmaccessorycategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmaccessorycategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmaccessorycategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 506,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmPurchaseInvoice.cs",
+              "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\frmPurchaseInvoice.cs",
+              "RelativeDocumentMoniker": "h2h\\frmPurchaseInvoice.cs",
+              "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\frmPurchaseInvoice.cs",
+              "RelativeToolTip": "h2h\\frmPurchaseInvoice.cs",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAWwHYAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T13:58:26.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmPurchaseInvoice.cs [Design]",
+              "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\frmPurchaseInvoice.cs",
+              "RelativeDocumentMoniker": "h2h\\frmPurchaseInvoice.cs",
+              "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\frmPurchaseInvoice.cs [Design]",
+              "RelativeToolTip": "h2h\\frmPurchaseInvoice.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T12:29:25.017Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmSearchAccs.cs [Design]",
+              "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\frmSearchAccs.cs",
+              "RelativeDocumentMoniker": "h2h\\frmSearchAccs.cs",
+              "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\frmSearchAccs.cs [Design]",
+              "RelativeToolTip": "h2h\\frmSearchAccs.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T07:15:21.768Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmAccessory.cs [Design]",
+              "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\frmAccessory.cs",
+              "RelativeDocumentMoniker": "h2h\\frmAccessory.cs",
+              "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\frmAccessory.cs [Design]",
+              "RelativeToolTip": "h2h\\frmAccessory.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T08:20:52.955Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "dbo.tbl_Accessory [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_GQRD8GC_SQLEXPRESS/H2H/True/SqlTable/dbo.tbl_Accessory.sql",
+              "ToolTip": "dbo.tbl_Accessory [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-17T07:15:49.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmSearchAccs.cs",
+              "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\frmSearchAccs.cs",
+              "RelativeDocumentMoniker": "h2h\\frmSearchAccs.cs",
+              "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\frmSearchAccs.cs",
+              "RelativeToolTip": "h2h\\frmSearchAccs.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAwwBgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T07:20:15.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmAccessory.cs",
+              "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\frmAccessory.cs",
+              "RelativeDocumentMoniker": "h2h\\frmAccessory.cs",
+              "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\frmAccessory.cs",
+              "RelativeToolTip": "h2h\\frmAccessory.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowBYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T08:22:41.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\Program.cs",
+              "RelativeDocumentMoniker": "h2h\\Program.cs",
+              "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\Program.cs",
+              "RelativeToolTip": "h2h\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T08:30:26.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmAddUnit.cs",
+              "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\frmAddUnit.cs",
+              "RelativeDocumentMoniker": "h2h\\frmAddUnit.cs",
+              "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\frmAddUnit.cs",
+              "RelativeToolTip": "h2h\\frmAddUnit.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAkwCgAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T14:37:39.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmAddUnit.cs [Design]",
+              "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\frmAddUnit.cs",
+              "RelativeDocumentMoniker": "h2h\\frmAddUnit.cs",
+              "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\frmAddUnit.cs [Design]",
+              "RelativeToolTip": "h2h\\frmAddUnit.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T14:34:20.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmAccessoryCategory.cs",
+              "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\frmAccessoryCategory.cs",
+              "RelativeDocumentMoniker": "h2h\\frmAccessoryCategory.cs",
+              "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\frmAccessoryCategory.cs",
+              "RelativeToolTip": "h2h\\frmAccessoryCategory.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAQwDAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T15:54:54.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmAccessoryCategory.cs [Design]",
+              "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\frmAccessoryCategory.cs",
+              "RelativeDocumentMoniker": "h2h\\frmAccessoryCategory.cs",
+              "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\frmAccessoryCategory.cs [Design]",
+              "RelativeToolTip": "h2h\\frmAccessoryCategory.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T10:11:01.092Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 158,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{007a3a6b-b5b2-454d-a2bd-cf929f989be2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
