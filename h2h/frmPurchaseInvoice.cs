@@ -140,5 +140,11 @@ namespace h2h
             }
             return GrandTotal;
         }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+
+            dataGridView1.Rows[e.RowIndex].Cells[6].Value = string.Format("{0:n}", double.Parse(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString()) * double.Parse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString()));
+        }
     }
 }
