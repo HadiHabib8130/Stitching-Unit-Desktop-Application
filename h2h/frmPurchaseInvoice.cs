@@ -48,32 +48,46 @@ namespace h2h
                     frmSearchAccs frmSearchAccs = new frmSearchAccs(this);
                     frmSearchAccs.ShowDialog();
                 }
+                else if (txtAccsID.Text == "0")
+                {
+                    txtAccsID.Clear();
+                    txtPaid.Focus();
+                }
                 else
                 {
-                    txtAccessory.Clear();
-                    txtPrice.Clear();
-                    txtQty.Clear();
-                    txtStock.Clear();
-                    txtUnit.Clear();
-                    cn.Open();
-                    cm = new SqlCommand("Select * from tbl_Accessory join tbl_Units on tbl_Accessory.AccsUnit = tbl_Units.UnitId where AccsId like '" + txtAccsID.Text + "'", cn);
-                    dr = cm.ExecuteReader();
-                    dr.Read();
-                    txtAccessory.Text = dr[2].ToString();
-                    txtPrice.Text = dr[4].ToString();
-                    txtStock.Text = dr[6].ToString();
-                    txtUnit.Text = dr[8].ToString();
+                    try
+                    {
+                        txtAccessory.Clear();
+                        txtPrice.Clear();
+                        txtQty.Clear();
+                        txtStock.Clear();
+                        txtUnit.Clear();
+                        cn.Open();
+                        cm = new SqlCommand("Select * from tbl_Accessory join tbl_Units on tbl_Accessory.AccsUnit = tbl_Units.UnitId where AccsId like '" + txtAccsID.Text + "'", cn);
+                        dr = cm.ExecuteReader();
+                        dr.Read();
+                        txtAccessory.Text = dr[2].ToString();
+                        txtPrice.Text = dr[4].ToString();
+                        txtStock.Text = dr[6].ToString();
+                        txtUnit.Text = dr[8].ToString();
 
 
-                    cn.Close();
+                        cn.Close();
 
-                    txtQty.Focus();
+                        txtQty.Focus();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        cn.Close();
+                    }
                 }
             }
         }
 
         private void txtQty_KeyDown(object sender, KeyEventArgs e)
         {
+            int serial = 0;
             int RowID = -1;
             bool descion = false;
             if(e.KeyCode == Keys.Enter)
@@ -87,7 +101,7 @@ namespace h2h
                 {
                     for (int i = 0; i < dataGridView1.Rows.Count; i++) 
                     {
-                        if (dataGridView1.Rows[i].Cells[0].Value.ToString() == txtAccsID.Text)
+                        if (dataGridView1.Rows[i].Cells[1].Value.ToString() == txtAccsID.Text)
                         {
                             RowID = i;
                             descion = true;
@@ -101,9 +115,11 @@ namespace h2h
 
                     if(descion == false)
                     {
+                        
                         Double Total = 0;
                         Total = Double.Parse(txtQty.Text) * Double.Parse(txtPrice.Text);
-                        dataGridView1.Rows.Add(txtAccsID.Text, txtAccessory.Text, txtStock.Text, txtPrice.Text, txtQty.Text, txtUnit.Text, string.Format("{0:n}", Total));
+                        serial++;
+                        dataGridView1.Rows.Add(serial,txtAccsID.Text, txtAccessory.Text, txtStock.Text, txtPrice.Text, txtQty.Text, txtUnit.Text, string.Format("{0:n}", Total));
                         txtAccsID.Clear();
                         txtAccessory.Clear();
                         txtQty.Clear();
@@ -115,8 +131,8 @@ namespace h2h
                     }
                     else
                     {
-                        dataGridView1.Rows[RowID].Cells[4].Value = (double.Parse(dataGridView1.Rows[RowID].Cells[4].Value.ToString()) + double.Parse(txtQty.Text)).ToString();
-                        dataGridView1.Rows[RowID].Cells[6].Value = string.Format("{0:n}",double.Parse(dataGridView1.Rows[RowID].Cells[3].Value.ToString()) * double.Parse(dataGridView1.Rows[RowID].Cells[4].Value.ToString()));
+                        dataGridView1.Rows[RowID].Cells[5].Value = (double.Parse(dataGridView1.Rows[RowID].Cells[5].Value.ToString()) + double.Parse(txtQty.Text)).ToString();
+                        dataGridView1.Rows[RowID].Cells[7].Value = string.Format("{0:n}",double.Parse(dataGridView1.Rows[RowID].Cells[4].Value.ToString()) * double.Parse(dataGridView1.Rows[RowID].Cells[5].Value.ToString()));
                         txtAccsID.Clear();
                         txtAccessory.Clear();
                         txtQty.Clear();
@@ -136,7 +152,7 @@ namespace h2h
             GrandTotal = 0;
             for(int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                GrandTotal = GrandTotal + int.Parse(dataGridView1.Rows[i].Cells[6].Value.ToString(),NumberStyles.Currency,CultureInfo.CurrentCulture);
+                GrandTotal = GrandTotal + int.Parse(dataGridView1.Rows[i].Cells[7].Value.ToString(),NumberStyles.Currency,CultureInfo.CurrentCulture);
             }
             return GrandTotal;
         }
@@ -144,7 +160,7 @@ namespace h2h
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
 
-            dataGridView1.Rows[e.RowIndex].Cells[6].Value = string.Format("{0:n}", double.Parse(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString()) * double.Parse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString()));
+            dataGridView1.Rows[e.RowIndex].Cells[7].Value = string.Format("{0:n}", double.Parse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString()) * double.Parse(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString()));
         }
     }
 }

@@ -93,17 +93,31 @@ namespace h2h
         {
             if (e.KeyCode == Keys.Enter)
             {
-                frmPurchaseInvoice.txtAccsID.Text = dataGridView1.SelectedCells[0].Value.ToString();
-                this.Dispose();
+                try
+                {
+                    frmPurchaseInvoice.txtAccsID.Text = dataGridView1.SelectedCells[0].Value.ToString();
+                    this.Dispose();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
 
             if (e.KeyCode == Keys.Down)
             {
-                
+                try
+                {
+                    dataGridView1.Focus();
+                    dataGridView1.Rows[1].Selected = true;
+                    dataGridView1.CurrentCell = dataGridView1.Rows[1].Cells[0];
 
-                dataGridView1.Focus();
-                dataGridView1.Rows[1].Selected = true;
-                dataGridView1.CurrentCell = dataGridView1.Rows[1].Cells[0];
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
                 
             }
         }
@@ -112,8 +126,16 @@ namespace h2h
         {
             if (e.KeyCode == Keys.Enter) 
             {
-                frmPurchaseInvoice.txtAccsID.Text = dataGridView1.SelectedCells[0].Value.ToString();
-                this.Dispose();
+                try
+                {
+                    frmPurchaseInvoice.txtAccsID.Text = dataGridView1.SelectedCells[0].Value.ToString();
+                    this.Dispose();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message) ;
+                }
+                
             }
         }
     }
