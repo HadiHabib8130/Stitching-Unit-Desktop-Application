@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\vs code\\projects\\h2h\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|d:\\vs code\\projects\\h2h\\h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|d:\\vs code\\projects\\h2h\\h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -101,8 +101,7 @@
               "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\frmSearchAccs.cs [Design]",
               "RelativeToolTip": "h2h\\frmSearchAccs.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T07:15:21.768Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-17T07:15:21.768Z"
             },
             {
               "$type": "Document",
@@ -134,8 +133,7 @@
               "RelativeToolTip": "h2h\\frmSearchAccs.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAuwFEAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T07:20:15.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T07:20:15.991Z"
             },
             {
               "$type": "Document",
