@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="h2h.exe" size="141784">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="h2h.exe" size="144344">
       <assemblyIdentity name="h2h" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TaP5bz8B025cvG9AhMgIbqOVYAZZiMzU7sLaPGaQQr4=</dsig:DigestValue>
+        <dsig:DigestValue>014k0KpfEwh0pizxPouJKh3NBEo1OY+qHAIJ5zEj7tk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

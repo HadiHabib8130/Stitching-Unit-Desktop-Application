@@ -73,18 +73,51 @@ namespace h2h
             }
             cn.Close();
         }
-
+        
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
-            cn.Open();
-            cm = new SqlCommand("select AccsId,AccsName,AccsPrice,AccsStock from tbl_Accessory Where AccsCategory like'" + CategoryID + "' and AccsName like '%"+txtSearch.Text+"%' Order by AccsName ASC", cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            if (cmbType.Text == "")
             {
-                dataGridView1.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString());
+                try
+                {
+                    dataGridView1.Rows.Clear();
+                    cn.Open();
+                    cm = new SqlCommand("select AccsId,AccsName,AccsPrice,AccsStock from tbl_Accessory Where AccsName like '%" + txtSearch.Text + "%' Order by AccsName ASC", cn);
+                    dr = cm.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        dataGridView1.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString());
+                    }
+                    cn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    cn.Close();
+                }
             }
-            cn.Close();
+            else
+            {
+                try
+                {
+                    dataGridView1.Rows.Clear();
+                    cn.Open();
+                    cm = new SqlCommand("select AccsId,AccsName,AccsPrice,AccsStock from tbl_Accessory Where AccsCategory like'" + CategoryID + "' and AccsName like '%" + txtSearch.Text + "%' Order by AccsName ASC", cn);
+                    dr = cm.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        dataGridView1.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString());
+                    }
+                    cn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    cn.Close();
+                }
+                
+            }
+            
         }
 
        

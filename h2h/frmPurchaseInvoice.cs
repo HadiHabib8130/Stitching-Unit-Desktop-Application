@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace h2h
 {
@@ -19,6 +20,9 @@ namespace h2h
         SqlCommand cm = new SqlCommand();
         SqlDataReader dr;
         int GrandTotal = 0;
+        int serial = 0;
+        bool isEditing = false;
+        
         public frmPurchaseInvoice()
         {
             InitializeComponent();
@@ -87,7 +91,7 @@ namespace h2h
 
         private void txtQty_KeyDown(object sender, KeyEventArgs e)
         {
-            int serial = 0;
+            
             int RowID = -1;
             bool descion = false;
             if(e.KeyCode == Keys.Enter)
@@ -127,7 +131,16 @@ namespace h2h
                         txtUnit.Clear();
                         txtPrice.Clear();
                         txtAccsID.Focus();
-                        txtTotal.Text = string.Format("{0:n}", CalculateTotal());
+                        if(cmbTransactionType.Text == "Cash")
+                        {
+                            txtTotal.Text = string.Format("{0:n}", CalculateTotal());
+                            txtPaid.Text = txtTotal.Text;
+                        }
+                        else
+                        {
+                            txtTotal.Text = string.Format("{0:n}", CalculateTotal());
+                        }
+                        
                     }
                     else
                     {
@@ -140,7 +153,15 @@ namespace h2h
                         txtUnit.Clear();
                         txtPrice.Clear();
                         txtAccsID.Focus();
-                        txtTotal.Text = string.Format("{0:n}", CalculateTotal());
+                        if (cmbTransactionType.Text == "Cash")
+                        {
+                            txtTotal.Text = string.Format("{0:n}", CalculateTotal());
+                            txtPaid.Text = txtTotal.Text;
+                        }
+                        else
+                        {
+                            txtTotal.Text = string.Format("{0:n}", CalculateTotal());
+                        }
                     } 
                     
                 }
@@ -161,6 +182,70 @@ namespace h2h
         {
 
             dataGridView1.Rows[e.RowIndex].Cells[7].Value = string.Format("{0:n}", double.Parse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString()) * double.Parse(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString()));
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colNmae = dataGridView1.Columns[e.ColumnIndex].Name;
+            if(colNmae == "Delete")
+            {
+                try
+                {
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    cn.Close();
+                }
+            }
+        }
+
+        private void cmbSupplier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.BeginInvoke(new Action(() =>
+            {
+                // Clear the text selection
+                cmbSupplier.SelectionLength = 0;
+
+                // Move focus to the next control
+                this.SelectNextControl(ActiveControl, true, true, true, true);
+            }));
+        }
+
+        private void cmbTransactionType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.BeginInvoke(new Action(() =>
+            {
+                // Clear the text selection
+                cmbSupplier.SelectionLength = 0;
+
+                // Move focus to the next control
+                this.SelectNextControl(ActiveControl, true, true, true, true);
+            }));
+            if(cmbTransactionType.Text == "Cash")
+            {
+                txtPaid.ReadOnly = true;
+            }
+            else
+            {
+                txtPaid.ReadOnly = false;
+            }
+        }
+
+        private void txtPaid_TextChanged(object sender, EventArgs e)
+        {
+            if(txtPaid.Text != "")
+            {
+                
+                
+                txtRemaining.Text = string.Format("{0:n}", double.Parse(txtTotal.Text, NumberStyles.Currency) - double.Parse(txtPaid.Text, NumberStyles.Currency));
+
+            }
+            else
+            {
+                txtRemaining.Text = txtTotal.Text;
+            }
         }
     }
 }

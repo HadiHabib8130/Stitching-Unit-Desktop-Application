@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbTransactionType = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtUnit = new System.Windows.Forms.TextBox();
             this.txtStock = new System.Windows.Forms.TextBox();
@@ -55,11 +55,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtInvNo = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtPaid = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +63,14 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtPaid = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtRemaining = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -111,7 +113,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(231)))), ((int)(((byte)(242)))));
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cmbTransactionType);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.txtUnit);
             this.panel2.Controls.Add(this.txtStock);
@@ -155,22 +157,23 @@
             this.label12.TabIndex = 23;
             this.label12.Text = "Remarks:";
             // 
-            // comboBox1
+            // cmbTransactionType
             // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            this.cmbTransactionType.AutoCompleteCustomSource.AddRange(new string[] {
             "Credit",
             "Cash"});
-            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbTransactionType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbTransactionType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbTransactionType.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTransactionType.FormattingEnabled = true;
+            this.cmbTransactionType.Items.AddRange(new object[] {
             "Credit",
             "Cash"});
-            this.comboBox1.Location = new System.Drawing.Point(940, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(99, 25);
-            this.comboBox1.TabIndex = 10;
+            this.cmbTransactionType.Location = new System.Drawing.Point(940, 16);
+            this.cmbTransactionType.Name = "cmbTransactionType";
+            this.cmbTransactionType.Size = new System.Drawing.Size(99, 25);
+            this.cmbTransactionType.TabIndex = 10;
+            this.cmbTransactionType.SelectedIndexChanged += new System.EventHandler(this.cmbTransactionType_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -310,6 +313,7 @@
             this.cmbSupplier.Name = "cmbSupplier";
             this.cmbSupplier.Size = new System.Drawing.Size(242, 25);
             this.cmbSupplier.TabIndex = 8;
+            this.cmbSupplier.SelectedIndexChanged += new System.EventHandler(this.cmbSupplier_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -354,14 +358,14 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column9,
@@ -372,7 +376,7 @@
             this.Column4,
             this.Column6,
             this.Column5,
-            this.Column8});
+            this.Delete});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(0, 181);
@@ -380,57 +384,8 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(1061, 372);
             this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(231)))), ((int)(((byte)(242)))));
-            this.panel3.Controls.Add(this.txtPaid);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.txtTotal);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 474);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1061, 79);
-            this.panel3.TabIndex = 6;
-            // 
-            // txtPaid
-            // 
-            this.txtPaid.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaid.Location = new System.Drawing.Point(520, 26);
-            this.txtPaid.Name = "txtPaid";
-            this.txtPaid.Size = new System.Drawing.Size(153, 43);
-            this.txtPaid.TabIndex = 28;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(440, 24);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(74, 37);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "Paid:";
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(198, 26);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(162, 43);
-            this.txtTotal.TabIndex = 26;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(112, 26);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 37);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "Total:";
             // 
             // Column9
             // 
@@ -494,12 +449,84 @@
             this.Column5.ReadOnly = true;
             this.Column5.Width = 61;
             // 
-            // Column8
+            // Delete
             // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column8.HeaderText = "Delete";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 51;
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 51;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(231)))), ((int)(((byte)(242)))));
+            this.panel3.Controls.Add(this.txtRemaining);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.txtPaid);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.txtTotal);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 474);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1061, 79);
+            this.panel3.TabIndex = 6;
+            // 
+            // txtPaid
+            // 
+            this.txtPaid.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaid.Location = new System.Drawing.Point(495, 26);
+            this.txtPaid.Name = "txtPaid";
+            this.txtPaid.Size = new System.Drawing.Size(153, 43);
+            this.txtPaid.TabIndex = 28;
+            this.txtPaid.TextChanged += new System.EventHandler(this.txtPaid_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(415, 24);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(74, 37);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Paid:";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(198, 26);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(162, 43);
+            this.txtTotal.TabIndex = 26;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(112, 26);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(80, 37);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "Total:";
+            // 
+            // txtRemaining
+            // 
+            this.txtRemaining.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRemaining.Location = new System.Drawing.Point(853, 26);
+            this.txtRemaining.Name = "txtRemaining";
+            this.txtRemaining.ReadOnly = true;
+            this.txtRemaining.Size = new System.Drawing.Size(162, 43);
+            this.txtRemaining.TabIndex = 30;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(704, 26);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(149, 37);
+            this.label15.TabIndex = 29;
+            this.label15.Text = "Remaining:";
             // 
             // frmPurchaseInvoice
             // 
@@ -547,7 +574,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtPrice;
         public System.Windows.Forms.TextBox txtAccsID;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTransactionType;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.TextBox textBox1;
@@ -564,6 +591,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewButtonColumn Column8;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.TextBox txtRemaining;
+        private System.Windows.Forms.Label label15;
     }
 }
