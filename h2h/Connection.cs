@@ -10,7 +10,7 @@ namespace h2h
     {
         public string MyCon()
         {
-            string con = "Data Source=DESKTOP-GQRD8GC\\SQLEXPRESS;Initial Catalog=test;Integrated Security=True;Encrypt=False";
+            string con = "Data Source=PC;Initial Catalog=test;User ID=sa;Password=Bookspot8130";
             return con;
         }
 

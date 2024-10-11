@@ -184,6 +184,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmSearchAccs";
             this.Text = "frmSearchAccs";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmSearchAccs_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

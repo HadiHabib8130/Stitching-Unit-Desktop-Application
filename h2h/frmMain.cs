@@ -75,5 +75,11 @@ namespace h2h
             frmReport frmReport = new frmReport();
             frmReport.ShowDialog();
         }
+
+        private void txtPurchaseAccs_Click(object sender, EventArgs e)
+        {
+            frmPurchaseInvoice frmPurchaseInvoice = new frmPurchaseInvoice();
+            frmPurchaseInvoice.ShowDialog();
+        }
     }
 }

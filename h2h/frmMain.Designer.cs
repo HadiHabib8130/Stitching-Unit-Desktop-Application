@@ -45,6 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnAddSchool = new System.Windows.Forms.Button();
             this.btnPaymentSlips = new System.Windows.Forms.Button();
+            this.txtPurchaseAccs = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -219,11 +220,22 @@
             this.btnPaymentSlips.UseVisualStyleBackColor = true;
             this.btnPaymentSlips.Click += new System.EventHandler(this.btnPaymentSlips_Click);
             // 
+            // txtPurchaseAccs
+            // 
+            this.txtPurchaseAccs.Location = new System.Drawing.Point(170, 258);
+            this.txtPurchaseAccs.Name = "txtPurchaseAccs";
+            this.txtPurchaseAccs.Size = new System.Drawing.Size(75, 51);
+            this.txtPurchaseAccs.TabIndex = 19;
+            this.txtPurchaseAccs.Text = "Accessory Purchase Invoice";
+            this.txtPurchaseAccs.UseVisualStyleBackColor = true;
+            this.txtPurchaseAccs.Click += new System.EventHandler(this.txtPurchaseAccs_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 360);
+            this.Controls.Add(this.txtPurchaseAccs);
             this.Controls.Add(this.btnPaymentSlips);
             this.Controls.Add(this.btnAddSchool);
             this.Controls.Add(this.label6);
@@ -268,5 +280,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnAddSchool;
         private System.Windows.Forms.Button btnPaymentSlips;
+        private System.Windows.Forms.Button txtPurchaseAccs;
     }
 }

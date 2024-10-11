@@ -26,6 +26,8 @@ namespace h2h
             LoadTypes();
             LoadAccs();
             frmPurchaseInvoice = frm;
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmSearchAccs_KeyDown);
         }
 
        
@@ -171,5 +173,14 @@ namespace h2h
                 
             }
         }
+
+        private void frmSearchAccs_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Escape)
+            {
+                this.Dispose();
+            }
+        }
     }
+    
 }

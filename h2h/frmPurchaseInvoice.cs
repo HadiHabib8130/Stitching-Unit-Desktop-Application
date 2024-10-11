@@ -21,13 +21,13 @@ namespace h2h
         SqlDataReader dr;
         int GrandTotal = 0;
         int serial = 0;
-        bool isEditing = false;
         
         public frmPurchaseInvoice()
         {
             InitializeComponent();
             cn.ConnectionString = conn.ConH2H();
             LoadSuppliers();
+            InvNO();
         }
 
         private void LoadSuppliers()
@@ -191,6 +191,10 @@ namespace h2h
             {
                 try
                 {
+                    dataGridView1.Rows.RemoveAt(e.RowIndex);
+                    txtTotal.Text = string.Format("{0:n}",CalculateTotal());
+                    updateSerial();
+
 
                 }
                 catch (Exception ex)
@@ -247,5 +251,69 @@ namespace h2h
                 txtRemaining.Text = txtTotal.Text;
             }
         }
+
+        private string GetInvNO()
+        {
+
+
+            string date = DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd");
+            string invNo;
+            try
+            {
+                cn.Open();
+                cm = new SqlCommand("Select * from tbl_Transactions where TransID like 'P-" + date + "' order by transID DESC", cn);
+                dr = cm.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    dr.Read();
+                    string TempInvNo = dr[0].ToString();
+                    int temp = int.Parse(TempInvNo.Substring(5, 4));
+                    temp++;
+                    invNo = "P-" + date + temp;
+
+                }
+                else
+                {
+                    invNo = "P-" + date + "0001";
+                }
+                cn.Close();
+                return invNo;
+                
+            }
+            catch(Exception ex)
+            {
+                invNo = "0";
+                MessageBox.Show(ex.Message);
+                cn.Close();
+                return invNo;
+            }
+            
+            
+        }
+        private void InvNO()
+        {
+            if (GetInvNO() == "0")
+            {
+                MessageBox.Show("Error in ID");
+                this.Dispose();
+            }
+            else
+            {
+                txtInvNo.Text = GetInvNO();
+            }
+        }
+
+        private void updateSerial()
+        {
+            for(int i = 0; i < dataGridView1.Rows.Count;i++)
+            {
+                serial = i + 1;
+                dataGridView1.Rows[i].Cells[0].Value = serial;
+                
+            }
+            
+        }
+
+       
     }
 }
