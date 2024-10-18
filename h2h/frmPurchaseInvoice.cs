@@ -182,6 +182,7 @@ namespace h2h
         {
 
             dataGridView1.Rows[e.RowIndex].Cells[7].Value = string.Format("{0:n}", double.Parse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString()) * double.Parse(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString()));
+            txtTotal.Text = string.Format("{0:n}",CalculateTotal());
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -314,6 +315,52 @@ namespace h2h
             
         }
 
-       
+        private void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+            if(txtTotal.Text != "")
+            {
+                if (txtPaid.Text != "")
+                {
+
+
+                    txtRemaining.Text = string.Format("{0:n}", double.Parse(txtTotal.Text, NumberStyles.Currency) - double.Parse(txtPaid.Text, NumberStyles.Currency));
+
+                }
+                else
+                {
+                    txtRemaining.Text = txtTotal.Text;
+                }
+            }
+            
+        }
+
+        private void PurchaseInvInsert()
+        {
+            try
+            {
+                for (int i = 0;i < dataGridView1.Rows.Count; i++)
+                {
+                    cn.Open();
+                    cm = new SqlCommand("insert into tbl_PurchaseInvoiceDetail(PurInvId,ItemCode,Price,Qty,Total)Values(@PurInvId,@ItemCode,@Price,@Qty,@Total)", cn);
+                    cm.Parameters.AddWithValue("@PurInvId",txtInvNo.Text);
+                    cm.Parameters.AddWithValue("@ItemCode",dataGridView1.Rows[i].Cells[1].Value);
+                    cm.Parameters.AddWithValue("@Price",dataGridView1.Rows[i].Cells[4].Value);
+                    cm.Parameters.AddWithValue("@Qty", dataGridView1.Rows[i].Cells[5].Value);
+                    cm.Parameters.AddWithValue("@Total", dataGridView1.Rows[i].Cells[7].Value);
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                cn.Close();
+            }
+        }
+        private void TransactionUpdate()
+        {
+
+        }
     }
 }

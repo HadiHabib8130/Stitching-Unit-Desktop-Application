@@ -16,7 +16,7 @@ namespace h2h
 
         public string ConH2H() 
         {
-            string con = "Data Source=DESKTOP-GQRD8GC\\SQLEXPRESS;Initial Catalog=H2H;Integrated Security=True;Encrypt=False";
+            string con = "Data Source=PC;Initial Catalog=H2H;User ID=sa;Password=Bookspot8130";
             return con;
         }
     }
