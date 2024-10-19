@@ -21,6 +21,8 @@ namespace h2h
         SqlDataReader dr;
         int GrandTotal = 0;
         int serial = 0;
+        int Party = 0;
+        int TransType = 2;
         
         public frmPurchaseInvoice()
         {
@@ -216,6 +218,28 @@ namespace h2h
                 // Move focus to the next control
                 this.SelectNextControl(ActiveControl, true, true, true, true);
             }));
+            try
+            {
+                cn.Open();
+                cm = new SqlCommand("select PartyID from tbl_Parties where PartyName like '"+cmbSupplier.Text+"'", cn);
+                dr = cm.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    dr.Read();
+                    Party = int.Parse(dr[0].ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Party doesn't exist");
+                }
+
+                cn.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                cn.Close();
+            }
         }
 
         private void cmbTransactionType_SelectedIndexChanged(object sender, EventArgs e)
@@ -230,10 +254,12 @@ namespace h2h
             }));
             if(cmbTransactionType.Text == "Cash")
             {
+                TransType = 0;
                 txtPaid.ReadOnly = true;
             }
             else
             {
+                TransType = 1;
                 txtPaid.ReadOnly = false;
             }
         }
@@ -262,20 +288,21 @@ namespace h2h
             try
             {
                 cn.Open();
-                cm = new SqlCommand("Select * from tbl_Transactions where TransID like 'P-" + date + "' order by transID DESC", cn);
+                cm = new SqlCommand("Select * from tbl_Transactions where TransID like 'P-" + date + "%' order by transID DESC", cn);
                 dr = cm.ExecuteReader();
                 if (dr.HasRows)
                 {
+
                     dr.Read();
                     string TempInvNo = dr[0].ToString();
-                    int temp = int.Parse(TempInvNo.Substring(5, 4));
+                    int temp = int.Parse(TempInvNo.Substring(6, 4));
                     temp++;
                     invNo = "P-" + date + temp;
 
                 }
                 else
                 {
-                    invNo = "P-" + date + "0001";
+                    invNo = "P-" + date + "1";
                 }
                 cn.Close();
                 return invNo;
@@ -343,10 +370,10 @@ namespace h2h
                     cn.Open();
                     cm = new SqlCommand("insert into tbl_PurchaseInvoiceDetail(PurInvId,ItemCode,Price,Qty,Total)Values(@PurInvId,@ItemCode,@Price,@Qty,@Total)", cn);
                     cm.Parameters.AddWithValue("@PurInvId",txtInvNo.Text);
-                    cm.Parameters.AddWithValue("@ItemCode",dataGridView1.Rows[i].Cells[1].Value);
-                    cm.Parameters.AddWithValue("@Price",dataGridView1.Rows[i].Cells[4].Value);
-                    cm.Parameters.AddWithValue("@Qty", dataGridView1.Rows[i].Cells[5].Value);
-                    cm.Parameters.AddWithValue("@Total", dataGridView1.Rows[i].Cells[7].Value);
+                    cm.Parameters.AddWithValue("@ItemCode",dataGridView1.Rows[i].Cells[1].Value.ToString());
+                    cm.Parameters.AddWithValue("@Price",dataGridView1.Rows[i].Cells[4].Value.ToString());
+                    cm.Parameters.AddWithValue("@Qty", dataGridView1.Rows[i].Cells[5].Value.ToString());
+                    cm.Parameters.AddWithValue("@Total", decimal.Parse(dataGridView1.Rows[i].Cells[7].Value.ToString(),NumberStyles.Currency));
                     cm.ExecuteNonQuery();
                     cn.Close();
                 }
@@ -358,9 +385,56 @@ namespace h2h
                 cn.Close();
             }
         }
-        private void TransactionUpdate()
+        private void TransactionInsert()
         {
+            try
+            {
+                if(txtPaid.Text != "")
+                {
+                    cn.Open();
+                    cm = new SqlCommand("insert into tbl_Transactions(TransID,TransDate,TransParty,TransType,TransRemarks,TransTotal,TransPaid,TransRemaining)values(@TransID,@TransDate,@TransParty,@TransType,@TransRemarks,@TransTotal,@TransPaid,@TransRemaining)", cn);
+                    cm.Parameters.AddWithValue("@TransID", txtInvNo.Text);
+                    cm.Parameters.AddWithValue("@TransDate", dateTimePicker1.Value);
+                    cm.Parameters.AddWithValue("@TransParty", Party);
+                    cm.Parameters.AddWithValue("@TransType", TransType);
+                    cm.Parameters.AddWithValue("@TransRemarks", txtRemarks.Text);
+                    cm.Parameters.AddWithValue("@TransTotal", decimal.Parse(txtTotal.Text,NumberStyles.Currency));
+                    cm.Parameters.AddWithValue("@TransPaid", decimal.Parse(txtPaid.Text, NumberStyles.Currency));
+                    cm.Parameters.AddWithValue("@TransRemaining", decimal.Parse(txtRemaining.Text, NumberStyles.Currency));
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                }
+                else
+                {
+                    cn.Open();
+                    cm = new SqlCommand("insert into tbl_Transactions(TransID,TransDate,TransParty,TransType,TransRemarks,TransTotal,TransPaid,TransRemaining)values(@TransID,@TransDate,@TransParty,@TransType,@TransRemarks,@TransTotal,@TransPaid,@TransRemaining)", cn);
+                    cm.Parameters.AddWithValue("@TransID", txtInvNo.Text);
+                    cm.Parameters.AddWithValue("@TransDate", dateTimePicker1.Value);
+                    cm.Parameters.AddWithValue("@TransParty", Party);
+                    cm.Parameters.AddWithValue("@TransType", TransType);
+                    cm.Parameters.AddWithValue("@TransRemarks", txtRemarks.Text);
+                    cm.Parameters.AddWithValue("@TransTotal", decimal.Parse(txtTotal.Text, NumberStyles.Currency));
+                    cm.Parameters.AddWithValue("@TransPaid", decimal.Parse(txtPaid.Text, NumberStyles.Currency));
+                    cm.Parameters.AddWithValue("@TransRemaining", decimal.Parse(txtRemaining.Text, NumberStyles.Currency));
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                cn.Close();
+            }
+        }
 
+        private void txtPaid_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                TransactionInsert();
+                PurchaseInvInsert();
+            }
         }
     }
 }
