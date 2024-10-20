@@ -297,12 +297,12 @@ namespace h2h
                     string TempInvNo = dr[0].ToString();
                     int temp = int.Parse(TempInvNo.Substring(6, 4));
                     temp++;
-                    invNo = "P-" + date + temp;
+                    invNo = "P-" + date + temp.ToString("D4");
 
                 }
                 else
                 {
-                    invNo = "P-" + date + "1";
+                    invNo = "P-" + date + "0001";
                 }
                 cn.Close();
                 return invNo;

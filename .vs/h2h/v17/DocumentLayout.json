@@ -3,12 +3,21 @@
   "WorkspaceRootPath": "D:\\vs code\\projects\\h2h\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|d:\\vs code\\projects\\h2h\\h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/PC/H2H/sa/SqlTable/dbo.tbl_PurchaseInvoiceDetail.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/PC/H2H/sa/SqlTable/dbo.tbl_Transactions.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hadi\\AppData\\Local\\Temp\\svr3j1mp..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|d:\\vs code\\projects\\h2h\\h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmpurchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmworkerentries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -17,6 +26,12 @@
     {
       "AbsoluteMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|D:\\vs code\\projects\\h2h\\h2h\\frmaccessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{72DF578F-56C0-436C-AF22-64FCA04E5FDB}|h2h\\h2h.csproj|solutionrelative:h2h\\frmaccessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hadi\\AppData\\Local\\Temp\\svr3j1mp..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hadi\\AppData\\Local\\Temp\\svr3j1mp..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,7 +55,7 @@
         },
         {
           "DockedHeight": 158,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -56,20 +71,50 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SQLQuery1.sql ",
+              "DocumentMoniker": "C:\\Users\\Hadi\\AppData\\Local\\Temp\\svr3j1mp..sql",
+              "ToolTip": "SQLQuery1.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-20T08:19:57.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.tbl_Transactions [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/PC/H2H/sa/SqlTable/dbo.tbl_Transactions.sql",
+              "ToolTip": "dbo.tbl_Transactions [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-20T08:19:44.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "dbo.tbl_PurchaseInvoiceDetail [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/PC/H2H/sa/SqlTable/dbo.tbl_PurchaseInvoiceDetail.sql",
+              "ToolTip": "dbo.tbl_PurchaseInvoiceDetail [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-20T08:19:40.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "frmPurchaseInvoice.cs",
               "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\frmPurchaseInvoice.cs",
               "RelativeDocumentMoniker": "h2h\\frmPurchaseInvoice.cs",
               "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\frmPurchaseInvoice.cs",
               "RelativeToolTip": "h2h\\frmPurchaseInvoice.cs",
-              "ViewState": "AQIAAKIBAAAAAAAAAAAAALIBAAAkAAAA",
+              "ViewState": "AQIAAKUBAAAAAAAAAAAAACsBAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-18T14:37:25.984Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "frmPurchaseInvoice.cs [Design]",
               "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\frmPurchaseInvoice.cs",
               "RelativeDocumentMoniker": "h2h\\frmPurchaseInvoice.cs",
@@ -81,25 +126,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "frmWorkerEntries.cs [Design]",
               "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\frmWorkerEntries.cs",
               "RelativeDocumentMoniker": "h2h\\frmWorkerEntries.cs",
               "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\frmWorkerEntries.cs [Design]",
               "RelativeToolTip": "h2h\\frmWorkerEntries.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T14:37:09.119Z"
+              "WhenOpened": "2024-10-18T14:37:09.119Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "frmAccessory.cs [Design]",
               "DocumentMoniker": "D:\\vs code\\projects\\h2h\\h2h\\frmAccessory.cs",
               "RelativeDocumentMoniker": "h2h\\frmAccessory.cs",
               "ToolTip": "D:\\vs code\\projects\\h2h\\h2h\\frmAccessory.cs [Design]",
               "RelativeToolTip": "h2h\\frmAccessory.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T14:37:03.164Z"
+              "WhenOpened": "2024-10-18T14:37:03.164Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
